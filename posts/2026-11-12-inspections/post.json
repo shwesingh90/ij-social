@@ -1,0 +1,9 @@
+{
+  "slug": "2026-11-12-inspections",
+  "topic": "inspections",
+  "publish_on": "2026-11-12",
+  "status": "ready",
+  "instagram": { "slides": ["ig-1.jpg", "ig-2.jpg", "ig-3.jpg", "ig-4.jpg", "ig-5.jpg", "ig-6.jpg"], "caption_file": "caption-instagram.txt", "status": "pending", "result": null },
+  "linkedin": { "image": "li.jpg", "caption_file": "caption-linkedin.txt", "status": "pending", "result": null },
+  "notes": "Screens from Shwe's inspections walkthrough video (20 Oct 2026); property address, tenant and inspector names blurred."
+}

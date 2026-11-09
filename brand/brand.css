@@ -1,0 +1,21 @@
+/* InvestorJoint social brand — fonts + palette. Linked from every slide as ../../brand/brand.css */
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;src:url(fonts/fraunces-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:800;src:url(fonts/fraunces-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:700;src:url(fonts/fraunces-latin-700-italic.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:800;src:url(fonts/fraunces-latin-800-italic.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;src:url(fonts/source-sans-3-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;src:url(fonts/source-sans-3-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;src:url(fonts/source-sans-3-latin-700-normal.woff2) format('woff2')}
+
+:root{
+  --ij-purple:#7B3FA8;      /* brand theme colour (investorjoint.com.au) */
+  --ij-purple-2:#8A4FB8;
+  --ij-ink:#2B2730;         /* charcoal text / dark slides */
+  --ij-ink-2:#4F4A57;       /* body text on light */
+  --ij-paper:#F4F1F8;       /* light slide ground */
+  --ij-lavender:#E6DDF2;    /* soft shapes */
+  --ij-sky:#86C5EE;         /* highlight on dark */
+  --ij-blue:#4A8CC9;
+  --ij-pale-sky:#CFE6FA;    /* highlight on purple */
+}
+body{margin:0}
