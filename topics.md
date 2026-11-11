@@ -6,7 +6,7 @@ Shwe can reorder rows, add new ones, or drop a folder with `"status": "ready"` i
 
 | # | Topic | Angle (what the post shows) | Status |
 |---|-------|-----------------------------|--------|
-| 1 | Property inspections | Incoming / ongoing / end-of-lease; create → walk through room by room → complete + report | queued: 2026-11-12-inspections |
+| 1 | Property inspections | Incoming / ongoing / end-of-lease; create → walk through room by room → complete + report | done: 2026-11-12-inspections |
 | 2 | Rent collection dashboard | One glance: overdue + amount outstanding, due this week, received in 30 days, top priorities to chase | todo |
 | 3 | Rooming houses | Each room its own rental: separate lease, separate rent, room details (type, furnishing, bathroom, features, availability) | todo |
 | 4 | Leases in one place | Every lease against its property and tenant, start dates and status, linked to rent and inspections | todo |
