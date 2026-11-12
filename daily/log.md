@@ -7,3 +7,4 @@ One line per item, newest at the bottom:
 2026-11-10 | listing | https://investorjoint.com.au/rent/qld/rasmussen-4815/3-billabong-lane-49 | Instagram: 18146945464593828 | LinkedIn: urn:li:share:7525691655086260224
 2026-11-10 | listing | https://investorjoint.com.au/rent/nsw/norwest-2153/rental-60 | Instagram: 18021423842739270 | LinkedIn: urn:li:share:7525692352947081216
 2026-11-12 | blog | https://investorjoint.com.au/blog/smsf-borrowing-limits-property | Instagram: 18110919722195777 | LinkedIn: urn:li:share:7526416797638615041
+2026-11-13 | blog | https://investorjoint.com.au/blog/cgt-main-residence-exemption-rental | Instagram: 18340072708274443 | LinkedIn: urn:li:share:7526778635962286080
