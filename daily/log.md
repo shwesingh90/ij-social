@@ -10,3 +10,4 @@ One line per item, newest at the bottom:
 2026-11-13 | blog | https://investorjoint.com.au/blog/cgt-main-residence-exemption-rental | Instagram: 18340072708274443 | LinkedIn: urn:li:share:7526778635962286080
 2026-11-16 | blog | https://investorjoint.com.au/blog/land-tax-thresholds-state | Instagram: 17912241099571881 | LinkedIn: urn:li:share:7527865736502099968
 2026-11-16 | blog | https://investorjoint.com.au/blog/trust-distribution-resolution-deadline-30-june | Instagram: 18081808784418178 | LinkedIn: urn:li:share:7527866359725277184
+2026-11-17 | blog | https://investorjoint.com.au/blog/rental-property-loan-interest-deductibility | Instagram: 17978984694167938 | LinkedIn: urn:li:share:7528228190620684288
