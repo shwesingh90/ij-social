@@ -1,0 +1,25 @@
+{
+  "slug": "2026-11-19-rent-collection",
+  "topic": "rent-collection",
+  "publish_on": "2026-11-19",
+  "status": "ready",
+  "instagram": {
+    "slides": [
+      "ig-1.jpg",
+      "ig-2.jpg",
+      "ig-3.jpg",
+      "ig-4.jpg",
+      "ig-5.jpg"
+    ],
+    "caption_file": "caption-instagram.txt",
+    "status": "ready",
+    "result": ""
+  },
+  "linkedin": {
+    "image": "li.jpg",
+    "caption_file": "caption-linkedin.txt",
+    "status": "ready",
+    "result": ""
+  },
+  "notes": "No screenshots in assets/, so the dashboard is a simplified HTML mock labelled 'Sample data' with generic sample values (initials, Unit 2 / Room 1, sample amounts)."
+}
