@@ -13,3 +13,6 @@ One line per item, newest at the bottom:
 2026-11-17 | blog | https://investorjoint.com.au/blog/rental-property-loan-interest-deductibility | Instagram: 17978984694167938 | LinkedIn: urn:li:share:7528228190620684288
 2026-11-18 | blog | https://investorjoint.com.au/blog/rental-property-expenses-claim | Instagram: 17978231450982707 | LinkedIn: urn:li:share:7528590607292743680
 2026-11-18 | blog | https://investorjoint.com.au/blog/repairs-vs-capital-improvements-rental-property | Instagram: 17913969303574123 | LinkedIn: urn:li:share:7528591242197114881
+2026-11-19 | blog | https://investorjoint.com.au/blog/self-managing-a-rental-property-software-stack | Instagram: 18128839364515043 | LinkedIn: urn:li:share:7528952848907403264
+2026-11-19 | blog | https://investorjoint.com.au/blog/moving-from-propertyme-migration-guide | Instagram: 18135858487793342 | LinkedIn: urn:li:share:7528953500823654401
+2026-11-19 | blog | https://investorjoint.com.au/blog/property-management-software-pricing-australia-explained | Instagram: 17999263773105553 | LinkedIn: urn:li:share:7528954177528504321
