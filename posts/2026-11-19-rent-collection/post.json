@@ -2,7 +2,7 @@
   "slug": "2026-11-19-rent-collection",
   "topic": "rent-collection",
   "publish_on": "2026-11-19",
-  "status": "ready",
+  "status": "posted",
   "instagram": {
     "slides": [
       "ig-1.jpg",
@@ -12,14 +12,14 @@
       "ig-5.jpg"
     ],
     "caption_file": "caption-instagram.txt",
-    "status": "ready",
-    "result": ""
+    "status": "posted",
+    "result": "media id 18138753985658770"
   },
   "linkedin": {
     "image": "li.jpg",
     "caption_file": "caption-linkedin.txt",
-    "status": "ready",
-    "result": ""
+    "status": "posted",
+    "result": "urn:li:share:7528940374958993409"
   },
   "notes": "No screenshots in assets/, so the dashboard is a simplified HTML mock labelled 'Sample data' with generic sample values (initials, Unit 2 / Room 1, sample amounts)."
 }
