@@ -1,0 +1,5 @@
+Our new system-neutral guide treats a move away from PropertyMe, or any property management platform, as a rent roll cutover. It walks through what to export, why opening trust balances should come from a reconciled month-end, how to run both systems side by side for at least a rent cycle, what to do on cutover day, and how to brief tenants and owners before the change.
+
+For Australian property managers, most migration problems come from skipping the reconciliation or switching mid-month, and with trust account rules varying by state, a planned cutover protects both the audit trail and owner confidence.
+
+#PropertyManagement #RentRoll #TrustAccounting #AustralianProperty

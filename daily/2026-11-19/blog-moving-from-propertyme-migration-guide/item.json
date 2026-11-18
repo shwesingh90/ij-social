@@ -1,0 +1,14 @@
+{
+  "kind": "blog",
+  "url": "https://investorjoint.com.au/blog/moving-from-propertyme-migration-guide",
+  "title": "Switching From PropertyMe: A Rent Roll Migration Guide",
+  "description": "How to move a rent roll between property management systems: export, opening trust balances, parallel run, cutover day and what to tell tenants and owners.",
+  "category": "Pm",
+  "readMinutes": 6,
+  "datePublished": "2026-11-18T22:15:55+11:00",
+  "takeaways": [
+    "Cut over at the start of a month",
+    "Build opening balances from a clean reconciliation",
+    "Run both systems in parallel before switching"
+  ]
+}
