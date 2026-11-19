@@ -16,3 +16,6 @@ One line per item, newest at the bottom:
 2026-11-19 | blog | https://investorjoint.com.au/blog/self-managing-a-rental-property-software-stack | Instagram: 18128839364515043 | LinkedIn: urn:li:share:7528952848907403264
 2026-11-19 | blog | https://investorjoint.com.au/blog/moving-from-propertyme-migration-guide | Instagram: 18135858487793342 | LinkedIn: urn:li:share:7528953500823654401
 2026-11-19 | blog | https://investorjoint.com.au/blog/property-management-software-pricing-australia-explained | Instagram: 17999263773105553 | LinkedIn: urn:li:share:7528954177528504321
+2026-11-20 | blog | https://investorjoint.com.au/blog/maintenance-work-order-workflow-property-managers | Instagram: 18132053131877471 | LinkedIn: urn:li:share:7529314935122776064
+2026-11-20 | blog | https://investorjoint.com.au/blog/owner-statements-what-good-looks-like | Instagram: 17913589818604276 | LinkedIn: urn:li:share:7529315319551553537
+2026-11-20 | blog | https://investorjoint.com.au/blog/routine-inspection-app-vs-spreadsheet | Instagram: 17936277465416775 | LinkedIn: urn:li:share:7529315702743175170
