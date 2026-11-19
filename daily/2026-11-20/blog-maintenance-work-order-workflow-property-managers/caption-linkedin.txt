@@ -1,0 +1,5 @@
+Our new guide maps a maintenance work order from the tenant's first report through triage, quote, owner approval, completion and invoice to the ledger. It shows where jobs usually stall, such as quotes stuck in inboxes, approvals given by text and invoices that miss the owner statement, and offers a six-question test for any work-order system.
+
+For Australian property managers and owners, every handoff between tools or people is a place a job can stall or an expense can go missing, and urgent repair rules vary by state, so a single record per job protects both the timeline and the books.
+
+#PropertyManagement #PropertyMaintenance #AustralianProperty #PropTech

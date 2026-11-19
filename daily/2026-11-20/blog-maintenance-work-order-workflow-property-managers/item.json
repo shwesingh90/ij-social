@@ -1,0 +1,14 @@
+{
+  "kind": "blog",
+  "url": "https://investorjoint.com.au/blog/maintenance-work-order-workflow-property-managers",
+  "title": "A Maintenance Work-Order Workflow That Property Managers Can Run",
+  "description": "The stages of a good maintenance work-order lifecycle, where agencies lose time between them, and how to run it in one system from request to ledger.",
+  "category": "Pm",
+  "readMinutes": 6,
+  "datePublished": "2026-11-18T22:09:52+11:00",
+  "takeaways": [
+    "Keep every job's thread in one place",
+    "Owner approvals belong inside the job record",
+    "Marking jobs paid should update the ledger"
+  ]
+}

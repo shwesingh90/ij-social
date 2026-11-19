@@ -1,0 +1,9 @@
+Most agencies do every maintenance step. What they lose is the time between them.
+
+1. Keep every job's thread in one place
+2. Owner approvals belong inside the job record
+3. Marking jobs paid should update the ledger
+
+Full article: link in bio.
+
+#PropertyManagement #PropertyMaintenance #PropertyManager #AustralianProperty #PropTech
