@@ -1,0 +1,9 @@
+Block pricing behaves awkwardly in two places: just above a tier, and below the first one.
+
+1. Block pricing spikes just above each tier
+2. Tiny portfolios pay for places they don't use
+3. Model cost at today's size and next year's
+
+Full article: link in bio.
+
+#PropertyManagement #PropertyManager #RentRoll #AustralianProperty #PropTech
