@@ -19,3 +19,6 @@ One line per item, newest at the bottom:
 2026-11-20 | blog | https://investorjoint.com.au/blog/maintenance-work-order-workflow-property-managers | Instagram: 18132053131877471 | LinkedIn: urn:li:share:7529314935122776064
 2026-11-20 | blog | https://investorjoint.com.au/blog/owner-statements-what-good-looks-like | Instagram: 17913589818604276 | LinkedIn: urn:li:share:7529315319551553537
 2026-11-20 | blog | https://investorjoint.com.au/blog/routine-inspection-app-vs-spreadsheet | Instagram: 17936277465416775 | LinkedIn: urn:li:share:7529315702743175170
+2026-11-21 | blog | https://investorjoint.com.au/blog/per-property-vs-per-block-pricing-small-rent-roll | Instagram: 18476467822137807 | LinkedIn: urn:li:share:7529677465334517760
+2026-11-21 | blog | https://investorjoint.com.au/blog/rent-arrears-process-by-state | Instagram: 18194769613361306 | LinkedIn: urn:li:share:7529677857384677377
+2026-11-21 | blog | https://investorjoint.com.au/blog/trust-accounting-requirements-by-state-property-managers | Instagram: 18122258086954899 | LinkedIn: urn:li:share:7529678215557087232
