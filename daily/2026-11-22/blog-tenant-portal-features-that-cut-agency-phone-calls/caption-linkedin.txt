@@ -1,0 +1,5 @@
+Most inbound calls to an agency fall into a few routine buckets: checking rent was received, asking for a rent history, reporting a fault, chasing a repair or asking for the lease again. Our new guide maps each tenant portal feature to the call it replaces, and sets out five questions to ask before choosing a portal.
+
+For Australian property managers, a request logged in a portal is a structured record with property, time, photos and description, rather than whatever got jotted down on a call. That frees staff time for the conversations that still need a person, such as arrears and disputes.
+
+#PropertyManagement #TenantPortal #PropTech #AustralianProperty
