@@ -22,3 +22,6 @@ One line per item, newest at the bottom:
 2026-11-21 | blog | https://investorjoint.com.au/blog/per-property-vs-per-block-pricing-small-rent-roll | Instagram: 18476467822137807 | LinkedIn: urn:li:share:7529677465334517760
 2026-11-21 | blog | https://investorjoint.com.au/blog/rent-arrears-process-by-state | Instagram: 18194769613361306 | LinkedIn: urn:li:share:7529677857384677377
 2026-11-21 | blog | https://investorjoint.com.au/blog/trust-accounting-requirements-by-state-property-managers | Instagram: 18122258086954899 | LinkedIn: urn:li:share:7529678215557087232
+2026-11-22 | blog | https://investorjoint.com.au/blog/commercial-lease-management-what-software-should-track | Instagram: 18158081965525520 | LinkedIn: urn:li:share:7530039831570128896
+2026-11-22 | blog | https://investorjoint.com.au/blog/how-to-choose-property-management-software-australia | Instagram: 17923479465452544 | LinkedIn: urn:li:share:7530040218620461056
+2026-11-22 | blog | https://investorjoint.com.au/blog/tenant-portal-features-that-cut-agency-phone-calls | Instagram: 18135902956748525 | LinkedIn: urn:li:share:7530040608048988160
