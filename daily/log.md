@@ -28,3 +28,6 @@ One line per item, newest at the bottom:
 2026-11-23 | blog | https://investorjoint.com.au/blog/minimum-rental-standards-by-state-landlord-checklist | Instagram: 18155508397533647 | LinkedIn: urn:li:share:7530402269834633216
 2026-11-23 | blog | https://investorjoint.com.au/blog/rent-increase-notice-rules-state | Instagram: 18141930010652525 | LinkedIn: urn:li:share:7530402638975291392
 2026-11-23 | blog | https://investorjoint.com.au/blog/refinancing-investment-property-equity-release | Instagram: 18155851465551580 | LinkedIn: urn:li:share:7530403011723116544
+2026-11-24 | blog | https://investorjoint.com.au/blog/tenants-common-vs-joint-tenants-tax-estate | Instagram: 18655573741053468 | LinkedIn: urn:li:share:7530764699777429505
+2026-11-24 | blog | https://investorjoint.com.au/blog/depreciation-recapture-selling-investment-property | Instagram: 18574438879073533 | LinkedIn: urn:li:share:7530765073544400897
+2026-11-24 | blog | https://investorjoint.com.au/blog/stamp-duty-investment-property-state | Instagram: 17986958390902201 | LinkedIn: urn:li:share:7530765450717200385
