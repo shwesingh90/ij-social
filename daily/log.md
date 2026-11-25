@@ -32,3 +32,4 @@ One line per item, newest at the bottom:
 2026-11-24 | blog | https://investorjoint.com.au/blog/depreciation-recapture-selling-investment-property | Instagram: 18574438879073533 | LinkedIn: urn:li:share:7530765073544400897
 2026-11-24 | blog | https://investorjoint.com.au/blog/stamp-duty-investment-property-state | Instagram: 17986958390902201 | LinkedIn: urn:li:share:7530765450717200385
 2026-11-25 | blog | https://investorjoint.com.au/blog/land-tax-surcharge-foreign-investors-state | Instagram: 18433653418149960 | LinkedIn: urn:li:share:7531127144782004224
+2026-11-26 | blog | https://investorjoint.com.au/blog/water-usage-charges-tenants-australia | Instagram: 18138195118662501 | LinkedIn: urn:li:share:7531489596442988544
