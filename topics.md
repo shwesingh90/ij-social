@@ -8,7 +8,7 @@ Shwe can reorder rows, add new ones, or drop a folder with `"status": "ready"` i
 |---|-------|-----------------------------|--------|
 | 1 | Property inspections | Incoming / ongoing / end-of-lease; create → walk through room by room → complete + report | done: 2026-11-12-inspections |
 | 2 | Rent collection dashboard | One glance: overdue + amount outstanding, due this week, received in 30 days, top priorities to chase | done: 2026-11-19-rent-collection |
-| 3 | Rooming houses | Each room its own rental: separate lease, separate rent, room details (type, furnishing, bathroom, features, availability) | todo |
+| 3 | Rooming houses | Each room its own rental: separate lease, separate rent, room details (type, furnishing, bathroom, features, availability) | done: 2026-11-26-rooming-houses |
 | 4 | Leases in one place | Every lease against its property and tenant, start dates and status, linked to rent and inspections | todo |
 | 5 | Work orders | Log a maintenance job against a property, track it to done | todo |
 | 6 | Entities (trusts, companies, personal) | Hold properties under the right entity and see each entity's portfolio | todo |
