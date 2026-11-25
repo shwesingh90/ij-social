@@ -1,0 +1,17 @@
+Rooming houses don't fit the "one property, one lease" mould.
+
+Each room has a different tenant, a different move-in date and a different rent. Squeeze all of that into a single lease or a spreadsheet and the details get lost fast.
+
+InvestorJoint treats every room as its own rental:
+
+1. Separate lease: each room gets its own lease with its own tenant, so one tenant moving on never means redoing the whole house.
+2. Separate rent: set and track rent room by room.
+3. Room details: record each room's type, furnishing, bathroom, features and availability, so you can see what's free and what each room offers.
+
+All the rooms sit under one property, so the whole house stays in one place.
+
+Built for landlords and investors running rooming houses and rent-by-the-room properties.
+
+Your first property is free: investorjoint.com.au
+
+#RoomingHouse #PropertyManagement #PropTech #PropertyInvestment #AustralianProperty

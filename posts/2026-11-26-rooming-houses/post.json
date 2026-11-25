@@ -1,0 +1,25 @@
+{
+  "slug": "2026-11-26-rooming-houses",
+  "topic": "rooming-houses",
+  "publish_on": "2026-11-26",
+  "status": "ready",
+  "instagram": {
+    "slides": [
+      "ig-1.jpg",
+      "ig-2.jpg",
+      "ig-3.jpg",
+      "ig-4.jpg",
+      "ig-5.jpg"
+    ],
+    "caption_file": "caption-instagram.txt",
+    "status": "ready",
+    "result": null
+  },
+  "linkedin": {
+    "image": "li.jpg",
+    "caption_file": "caption-linkedin.txt",
+    "status": "ready",
+    "result": null
+  },
+  "notes": "No screenshots in assets/, so the rooms list and room details are simplified HTML mocks labelled 'Sample data' with generic sample values (Room 1-4, initials, sample weekly rents, generic room details)."
+}
