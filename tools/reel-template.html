@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>InvestorJoint reel</title>
+<link rel="stylesheet" href="../brand/brand.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#000}
+#slide{width:1080px;height:1920px;position:relative;overflow:hidden;font-family:'Source Sans 3','Segoe UI',Helvetica,sans-serif;color:#2B2730;background:#F4F1F8}
+.scene{position:absolute;inset:0;opacity:0}
+.serif{font-family:'Fraunces',Georgia,serif}
+.mark{position:absolute;left:90px;top:150px;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:44px;letter-spacing:-.5px;z-index:5}
+.mark span{color:#7B3FA8}
+.bar{position:absolute;left:90px;right:90px;top:110px;height:8px;border-radius:8px;background:rgba(43,39,48,.12);z-index:5;overflow:hidden}
+.bar i{display:block;height:100%;width:100%;background:#7B3FA8;transform-origin:left;transform:scaleX(0)}
+.blob{position:absolute;border-radius:50%}
+/* hook */
+#hook{background:#F4F1F8}
+#hook .pill{position:absolute;left:90px;top:430px;font-size:30px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#F4F1F8;background:#2B2730;padding:14px 28px;border-radius:999px}
+#hook h1{position:absolute;left:90px;right:110px;top:560px;margin:0;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:150px;line-height:.98;letter-spacing:-3px}
+#hook h1 .w{display:inline-block}
+#hook h1 .acc{font-style:italic;font-weight:700;color:#7B3FA8}
+#hook .sub{position:absolute;left:90px;right:150px;top:1260px;font-size:52px;line-height:1.3;color:#4F4A57}
+/* points */
+.pt{background:#2B2730;color:#F4F1F8}
+.pt .num{position:absolute;left:70px;top:300px;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:460px;line-height:1;color:#86C5EE;letter-spacing:-10px}
+.pt .of{position:absolute;right:110px;top:360px;font-size:34px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#B9A6D6}
+.pt .card{position:absolute;left:90px;right:100px;top:900px;background:#F4F1F8;color:#2B2730;border-radius:36px;padding:64px 60px;box-shadow:18px 20px 0 #7B3FA8}
+.pt h2{margin:0 0 30px;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:92px;line-height:1.02;letter-spacing:-1.5px}
+.pt p{margin:0;font-size:52px;line-height:1.32;color:#4F4A57}
+.pt.light{background:#F4F1F8;color:#2B2730}
+.pt.light .num{color:#7B3FA8}
+.pt.light .of{color:#8A8393}
+.pt.light .card{background:#fff;border:4px solid #2B2730;box-shadow:18px 20px 0 #2B2730}
+/* outro */
+#outro{background:#7B3FA8;color:#fff}
+#outro .big{position:absolute;left:90px;right:100px;top:560px;margin:0;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:132px;line-height:1;letter-spacing:-2.5px}
+#outro .big em{font-weight:700;color:#CFE6FA}
+#outro .cta{position:absolute;left:90px;top:1060px;font-size:52px;font-weight:700;background:#fff;color:#7B3FA8;padding:26px 44px;border-radius:999px}
+#outro .url{position:absolute;left:90px;top:1240px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:60px;color:#fff}
+#outro .mk{position:absolute;left:90px;top:150px;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:44px;color:#fff}
+#outro .mk span{color:#CFE6FA}
+</style>
+</head>
+<body>
+<div id="slide"></div>
+<script>
+// window.REEL is injected by tools/reel.mjs before this runs (or set below for previews).
+(function(){
+const R = window.REEL;
+const S = document.getElementById('slide');
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const HOOK = 4.2, PT = 3.9, OUT = 5.4;
+const pts = R.points;
+const total = HOOK + PT * pts.length + OUT;
+window.DURATION = total;
+const ease = 'cubic-bezier(.2,.8,.2,1)';
+const anims = [];
+const A = (el, kf, start, dur, extra={}) => {
+  const a = el.animate(kf, {delay: start*1000, duration: dur*1000, fill: 'both', easing: extra.easing || ease});
+  a.pause(); anims.push(a); return a;
+};
+const scene = (id, cls, html, start, end, last) => {
+  const d = document.createElement('div'); d.className = 'scene ' + (cls||''); if (id) d.id = id; d.innerHTML = html; S.appendChild(d);
+  const f = .25 / (end - start);
+  A(d, [{opacity:0,offset:0},{opacity:1,offset:f},{opacity:1,offset:1-f},{opacity:last?1:0,offset:1}], start, end - start, {easing:'linear'});
+  // gentle push-in for the whole scene
+  A(d, [{transform:'scale(1)'},{transform:'scale(1.035)'}], start, end - start, {easing:'linear'});
+  return d;
+};
+
+// HOOK
+const words = esc(R.hook.line1).split(' ');
+const hook = scene('hook', '', `
+  <div class="blob" style="right:-220px;top:980px;width:720px;height:720px;background:#E6DDF2"></div>
+  <div class="blob" style="left:-110px;top:1460px;width:260px;height:260px;border:4px dashed #B9A6D6"></div>
+  <div class="mark">Investor<span>Joint</span></div>
+  <div class="pill">${esc(R.hook.kicker)}</div>
+  <h1>${words.map(w=>`<span class="w">${w}</span>`).join(' ')}<br><span class="w acc">${esc(R.hook.accent)}</span></h1>
+  ${R.hook.sub ? `<div class="sub">${esc(R.hook.sub)}</div>` : ''}`, 0, HOOK);
+hook.querySelectorAll('h1 .w').forEach((w,i)=>A(w,[{opacity:0,transform:'translateY(60px)'},{opacity:1,transform:'none'}], .15 + i*.12, .55));
+A(hook.querySelector('.pill'), [{opacity:0,transform:'translateX(-40px)'},{opacity:1,transform:'none'}], .05, .5);
+if (R.hook.sub) A(hook.querySelector('.sub'), [{opacity:0,transform:'translateY(30px)'},{opacity:1,transform:'none'}], 1.3, .6);
+
+// POINTS
+pts.forEach((p,i)=>{
+  const st = HOOK + i*PT, en = st + PT;
+  const d = scene(null, 'pt' + (i%2 ? ' light' : ''), `
+    <div class="mark" style="color:${i%2?'#2B2730':'#F4F1F8'}">Investor<span style="color:${i%2?'#7B3FA8':'#86C5EE'}">Joint</span></div>
+    <div class="num">${i+1}</div>
+    <div class="of">${i+1} of ${pts.length}</div>
+    <div class="card"><h2>${esc(p.title)}</h2>${p.body ? `<p>${esc(p.body)}</p>` : ''}</div>`, st, en);
+  A(d.querySelector('.num'), [{opacity:0,transform:'translateY(-80px) scale(.9)'},{opacity:1,transform:'none'}], st+.05, .6);
+  A(d.querySelector('.card'), [{opacity:0,transform:'translateY(120px) rotate(2deg)'},{opacity:1,transform:'rotate(-1.2deg)'}], st+.25, .7);
+});
+
+// OUTRO
+const os = HOOK + PT*pts.length;
+const out = scene('outro', '', `
+  <div class="blob" style="right:-200px;top:1250px;width:640px;height:640px;background:#8A4FB8"></div>
+  <div class="mk">Investor<span>Joint</span></div>
+  <h2 class="big">${esc(R.outro.line1)}<br><em>${esc(R.outro.accent)}</em></h2>
+  <div class="cta">${esc(R.outro.cta || 'Your first property is free')}</div>
+  <div class="url">investorjoint.com.au</div>`, os, total, true);
+A(out.querySelector('.big'), [{opacity:0,transform:'translateY(60px)'},{opacity:1,transform:'none'}], os+.15, .6);
+A(out.querySelector('.cta'), [{opacity:0,transform:'scale(.8)'},{opacity:1,transform:'none'}], os+.7, .5, {easing:'cubic-bezier(.3,1.5,.5,1)'});
+A(out.querySelector('.url'), [{opacity:0},{opacity:1}], os+1.1, .5);
+
+// progress bar
+const bar = document.createElement('div'); bar.className = 'bar'; bar.innerHTML = '<i></i>'; S.appendChild(bar);
+A(bar.firstChild, [{transform:'scaleX(0)'},{transform:'scaleX(1)'}], 0, total, {easing:'linear'});
+A(bar, [{opacity:1},{opacity:0}], os - .2, .3, {easing:'linear'});
+
+window.seek = t => { for (const a of anims) a.currentTime = t*1000; };
+window.seek(0);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "slug": "2026-11-27-rent-collection",
+  "source": "topics.md row 2 (Rent collection dashboard)",
+  "hook": {
+    "kicker": "Rent collection",
+    "line1": "Who owes you rent",
+    "accent": "right now?",
+    "sub": "See it at a glance on InvestorJoint."
+  },
+  "points": [
+    {
+      "title": "Overdue, up top",
+      "body": "Every overdue rent and the amount outstanding."
+    },
+    {
+      "title": "Due this week",
+      "body": "What's coming up, so you see it before it's late."
+    },
+    {
+      "title": "Who to chase first",
+      "body": "Top priorities to chase, plus rent received in the last 30 days."
+    }
+  ],
+  "outro": {
+    "line1": "Stop chasing",
+    "accent": "spreadsheets.",
+    "cta": "Your first property is free"
+  },
+  "publish_on": "2026-11-27",
+  "status": "ready",
+  "platforms": {
+    "instagram": {
+      "status": "todo",
+      "result": ""
+    },
+    "facebook": {
+      "status": "todo",
+      "result": ""
+    },
+    "tiktok": {
+      "status": "todo",
+      "result": ""
+    },
+    "youtube": {
+      "status": "todo",
+      "result": ""
+    }
+  },
+  "notes": "First reel; posted by hand from the setup chat."
+}
