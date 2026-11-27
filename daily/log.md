@@ -34,3 +34,6 @@ One line per item, newest at the bottom:
 2026-11-25 | blog | https://investorjoint.com.au/blog/land-tax-surcharge-foreign-investors-state | Instagram: 18433653418149960 | LinkedIn: urn:li:share:7531127144782004224
 2026-11-26 | blog | https://investorjoint.com.au/blog/water-usage-charges-tenants-australia | Instagram: 18138195118662501 | LinkedIn: urn:li:share:7531489596442988544
 2026-11-27 | blog | https://investorjoint.com.au/blog/trust-vs-individual-property-ownership-tax | Instagram: 18030921257868557 | LinkedIn: urn:li:share:7531852080010166274
+2026-11-28 | blog | https://investorjoint.com.au/blog/selling-investment-property-tax-checklist | Instagram: 18653276722047982 | LinkedIn: urn:li:share:7532214170973569024 | Facebook: 496241900236188_122187864938645456
+2026-11-28 | listing | https://investorjoint.com.au/rent/wa/furnissdale-6209/490-pinjarra-road-63 | Instagram: 18347678263261392 | LinkedIn: urn:li:share:7532214601825046529 | Facebook: 496241900236188_122187865328645456
+2026-11-28 | listing | https://investorjoint.com.au/rent/qld/mount-sheridan-4868/71-barnard-drive-61 | Instagram: 18182047126431253 | LinkedIn: urn:li:share:7532214961956270080 | Facebook: 496241900236188_122187865532645456
