@@ -27,22 +27,22 @@
     "cta": "Your first property is free"
   },
   "publish_on": "2026-11-27",
-  "status": "ready",
+  "status": "posted",
   "platforms": {
     "instagram": {
-      "status": "todo",
-      "result": ""
+      "status": "posted",
+      "result": "media id 17994329889098636"
     },
     "facebook": {
-      "status": "todo",
+      "status": "not_connected",
       "result": ""
     },
     "tiktok": {
-      "status": "todo",
+      "status": "not_connected",
       "result": ""
     },
     "youtube": {
-      "status": "todo",
+      "status": "not_connected",
       "result": ""
     }
   },
