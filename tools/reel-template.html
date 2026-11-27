@@ -61,9 +61,12 @@ body{margin:0;background:#000}
 const R = window.REEL;
 const S = document.getElementById('slide');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const HOOK = 4.2, PT = 3.9, OUT = 5.4;
 const pts = R.points;
-const total = HOOK + PT * pts.length + OUT;
+// Scene lengths: fixed by default; with a voice-over, tools/reel.mjs passes R.timing = [hook, ...points, outro].
+const T = R.timing || [4.2, ...pts.map(() => 3.9), 5.4];
+const HOOK = T[0], OUT = T[T.length - 1];
+const startOf = i => HOOK + T.slice(1, 1 + i).reduce((a, b) => a + b, 0);
+const total = T.reduce((a, b) => a + b, 0);
 window.DURATION = total;
 const ease = 'cubic-bezier(.2,.8,.2,1)';
 const anims = [];
@@ -95,7 +98,7 @@ if (R.hook.sub) A(hook.querySelector('.sub'), [{opacity:0,transform:'translateY(
 
 // POINTS
 pts.forEach((p,i)=>{
-  const st = HOOK + i*PT, en = st + PT;
+  const st = startOf(i), PT = T[i + 1], en = st + PT;
   if (p.photo) {
     const ic = (k) => ({bed:'<path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18h18"/><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/>',bath:'<path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 4 0"/>',car:'<path d="M5 16l1.5-5a2 2 0 0 1 2-1.5h7a2 2 0 0 1 2 1.5L19 16"/><rect x="3" y="16" width="18" height="4" rx="1"/>'}[k]);
     const svgI = k => `<svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#86C5EE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ic(k)}</svg>`;
@@ -120,7 +123,7 @@ pts.forEach((p,i)=>{
 });
 
 // OUTRO
-const os = HOOK + PT*pts.length;
+const os = startOf(pts.length);
 const out = scene('outro', '', `
   <div class="blob" style="right:-200px;top:1250px;width:640px;height:640px;background:#8A4FB8"></div>
   <div class="mk">Investor<span>Joint</span></div>

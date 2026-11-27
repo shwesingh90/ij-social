@@ -54,6 +54,18 @@ for n, (d, it) in enumerate(picks, 1):
         p.update({'beds': it.get('beds'), 'baths': it.get('baths'), 'parking': it.get('parking')})
     points.append(p)
 
+STATES = {'NSW': 'New South Wales', 'VIC': 'Victoria', 'QLD': 'Queensland', 'WA': 'Western Australia', 'SA': 'South Australia', 'TAS': 'Tasmania', 'ACT': 'the A C T', 'NT': 'the Northern Territory'}
+def spoken(p, it):
+    where = f"{it.get('suburb') or ''}, {STATES.get(it.get('state') or '', it.get('state') or '')}"
+    rent = it.get('rentPerWeek')
+    if it.get('roomRental'):
+        return f"In {where}, a room for {rent} dollars a week." if rent else f"In {where}, a room for rent."
+    bits = []
+    if it.get('beds'): bits.append(f"{it['beds']} bedroom{'s' if it['beds'] != 1 else ''}")
+    if it.get('baths'): bits.append(f"{it['baths']} bathroom{'s' if it['baths'] != 1 else ''}")
+    head = f"In {where}: " + ', '.join(bits) if bits else f"In {where}"
+    return head + (f", for {rent} dollars a week." if rent else ".")
+lines = [spoken(p, it) for p, (_, it) in zip(points, picks)]
 count = len(points)
 reel = {
     'slug': os.path.basename(os.path.normpath(out)),
@@ -64,6 +76,8 @@ reel = {
     'points': points,
     'outro': {'line1': 'Like one?', 'accent': 'Enquire today.', 'cta': 'Browse rentals', 'url': 'investorjoint.com.au/rent'},
     'listings': [p['url'] for p in points],
+    'narration': [f"Looking for a rental? Here {'are' if len(points) != 1 else 'is'} the newest {'homes' if len(points) != 1 else 'home'} on InvestorJoint this week."] + lines
+                 + ["Like one? Enquire today at InvestorJoint dot com dot A U, slash rent."],
 }
 json.dump(reel, open(os.path.join(out, 'reel.json'), 'w'), indent=2)
 print('\n'.join(reel['listings']))

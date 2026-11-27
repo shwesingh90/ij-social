@@ -34,7 +34,7 @@
     "accent": "More done.",
     "cta": "Your first property is free"
   },
-  "publish_on": "2026-12-01",
+  "publish_on": "2026-11-27",
   "status": "ready",
   "features": [
     "U277",
@@ -63,5 +63,25 @@
       "status": "todo",
       "result": ""
     }
-  }
+  },
+  "narration": [
+    "Is your team's to-do list scattered across inboxes, spreadsheets and sticky notes? Task management is now live in InvestorJoint.",
+    "Work the way you like, on a board or a list. Drag cards between lanes you name yourself.",
+    "Every card holds everything: several assignees, checklists, labels, files, dates, and your own custom fields.",
+    "Link a task to a property, an entity or a contact, or turn an email straight into a task.",
+    "Workflows run themselves. Set out the steps by role, repeat them monthly or quarterly, or start them automatically when a lease is signed.",
+    "And nothing slips through, with bell and email alerts when you're assigned, and reminders when work is due or overdue.",
+    "Less chasing, more done. Find it under Tasks in the sidebar. And your first property is free, at InvestorJoint dot com dot A U."
+  ],
+  "voice": [
+    "vo-0.wav",
+    "vo-1.wav",
+    "vo-2.wav",
+    "vo-3.wav",
+    "vo-4.wav",
+    "vo-5.wav",
+    "vo-6.wav"
+  ],
+  "voice_name": "bf_emma",
+  "notes": "Posted early from the setup chat at Shwe's request."
 }

@@ -1,6 +1,6 @@
 # Reels playbook
 
-The Mon/Wed/Fri scheduled task follows this file. Each run makes one short vertical video (20–40 s, 1080×1920, 30 fps, with original synthesised background music) and posts it to Instagram Reels, the Facebook Page (Reels), TikTok and YouTube Shorts. Posting is fully automatic, so the checks below are the approval: if a check fails, **do not post**.
+The Mon/Wed/Fri scheduled task follows this file. Each run makes one short vertical video (20–40 s, 1080×1920, 30 fps, with a British female voice-over and original synthesised background music underneath) and posts it to Instagram Reels, the Facebook Page (Reels), TikTok and YouTube Shorts. Posting is fully automatic, so the checks below are the approval: if a check fails, **do not post**.
 
 ## Accounts (Windsor.ai for Social Media)
 
@@ -25,10 +25,20 @@ Together with the Tuesday feature announcement (`ANNOUNCEMENTS.md`), every week 
 
 One reel per day at most: if any `reels/*/reel.json` has `publish_on` = today (Sydney) and `"status": "posted"`, stop with a one-line summary. Never post the same reel or the same article twice (check `reels/log.md` and `reels/used.json`).
 
+## Voice-over (every reel)
+
+Every reel has a spoken voice-over: Shwe's standing choice is the free local British female voice **`bf_emma`** (Kokoro), with the music low underneath.
+
+- Write `narration` in reel.json: one line per scene, in order (hook, each point, outro), so the count is points + 2. Spoken, warm and conversational, 10–25 words a line, saying the same facts as that screen (it may add a few connecting words, never new facts). The hook line asks the viewer's problem or names the news; the last line ends with the call to action and the site, written as "InvestorJoint dot com dot A U". Write numbers the way they should be said ("seven hundred dollars a week", "4.35 per cent", "the first of December"), and spell out abbreviations that read badly (RBA → "the Reserve Bank", "A P R A").
+- Then run `python3 tools/voice.py <reel dir>` (first run downloads the voice model, about 350 MB, from GitHub; takes about a minute). It writes `vo-0.wav`… and sets `voice` in reel.json. `tools/reel.mjs` then times each scene to its line and mixes the music under the voice; expect 35–60 s reels.
+- Check stills at the new scene times (frames ≈ halfway through each scene) before the full render. Commit the `vo-*.wav` files with the reel.
+- If the voice step fails, do not post a silent reel: mark it `failed` with the error and report it.
+
 ## Steps
 
 1. **Set up.** `git pull` on `main`. `cd tools && npm install`.
 2. **Write `reels/<YYYY-MM-DD>-<short-topic>/reel.json`** in the shape of `reels/2026-11-27-rent-collection/reel.json` (text reels) or the file `tools/week-listings.py` writes (rentals): `hook` {kicker ≤ 22, line1 ≤ 34, accent ≤ 26, sub ≤ 80 chars}, 3–5 text `points` {title ≤ 40, body ≤ 90} or 1–8 photo points, `outro` {line1 ≤ 30, accent ≤ 26, cta}, `source` (article URL or features row), `publish_on`, `status: "ready"`, `platforms` (instagram/facebook/tiktok/youtube, each `{status:"todo", result:""}`). The hook must make someone stop scrolling: a question or a sharp statement, never the feature name alone.
+2b. **Voice-over.** Write `narration` and run `python3 tools/voice.py reels/<slug>` (see "Voice-over" above).
 3. **Check frames first.** `node tools/reel.mjs reels/<slug> --frames 1.6,6,10,14,19` must exit 0 (it fails on text outside the safe area or missing fonts). Open each `frame-*.jpg` with the image viewer: no clipped, overlapping or orphaned text. Fix the copy and repeat. Delete the frame files.
 4. **Render.** `node tools/reel.mjs reels/<slug>` → `reel.mp4` + `cover.jpg` (takes about a minute). Must exit 0.
 5. **Captions.** `caption.txt`: hook line, the 3 points as short numbered lines, one benefit line, "Your first property is free → link in bio." (feature) or "Full article: link in bio." (blog), 5–7 hashtags. `youtube-title.txt`: one line ≤ 90 chars ending in `#shorts`. Australian English.

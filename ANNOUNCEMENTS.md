@@ -16,6 +16,15 @@ Run `get_connectors` first; a platform with no connected account is marked `not_
 
 Public URLs: `https://raw.githubusercontent.com/shwesingh90/ij-social/main/announcements/<slug>/<file>`.
 
+## Voice-over (every reel)
+
+Every reel has a spoken voice-over: Shwe's standing choice is the free local British female voice **`bf_emma`** (Kokoro), with the music low underneath.
+
+- Write `narration` in reel.json: one line per scene, in order (hook, each point, outro), so the count is points + 2. Spoken, warm and conversational, 10–25 words a line, saying the same facts as that screen (it may add a few connecting words, never new facts). The hook line asks the viewer's problem or names the news; the last line ends with the call to action and the site, written as "InvestorJoint dot com dot A U". Write numbers the way they should be said ("seven hundred dollars a week", "4.35 per cent", "the first of December"), and spell out abbreviations that read badly (RBA → "the Reserve Bank", "A P R A").
+- Then run `python3 tools/voice.py <reel dir>` (first run downloads the voice model, about 350 MB, from GitHub; takes about a minute). It writes `vo-0.wav`… and sets `voice` in reel.json. `tools/reel.mjs` then times each scene to its line and mixes the music under the voice; expect 35–60 s reels.
+- Check stills at the new scene times (frames ≈ halfway through each scene) before the full render. Commit the `vo-*.wav` files with the reel.
+- If the voice step fails, do not post a silent reel: mark it `failed` with the error and report it.
+
 ## Steps
 
 1. **Set up.** `git pull` on `main`; `cd tools && npm install`. If `announcements/*/reel.json` has `"status": "ready"` and `publish_on` ≤ today (Sydney), it is already made: skip to step 7. If one for this week already has `"status": "posted"`, stop.
@@ -28,7 +37,7 @@ Public URLs: `https://raw.githubusercontent.com/shwesingh90/ij-social/main/annou
    If nothing qualifies, finish with a one-line "no customer-facing features shipped this week" summary and commit nothing.
 4. **Pick the headline** (the most useful to the most customers) and up to 3 runners-up. Related items (e.g. several phases of one feature) are one feature. Write down in your own words, from the code docs only, what each does for a property manager, investor or advisor. No internal names (U-numbers, table names, flags, "migration"), no claims the docs don't support.
 5. **Make the post** in `announcements/<YYYY-MM-DD>-<short-feature>/`, copying the shape of `announcements/2026-12-01-task-management/` exactly:
-   - `reel.json` for the headline: kicker "New: <Feature>" (≤ 22 chars), a hook line that names the user's problem, 3 to 5 points covering the feature's main capabilities in concrete detail, outro, plus `source`, `features` (the backlog ids), `publish_on`, `status: "ready"`, `platforms` (instagram, facebook, tiktok, youtube, linkedin, each `{status:"todo", result:""}`). Check stills (`node tools/reel.mjs <dir> --frames 1.6,6,10,14,19`, look at every frame, delete them), then render (`node tools/reel.mjs <dir>`).
+   - `reel.json` for the headline: kicker "New: <Feature>" (≤ 22 chars), a hook line that names the user's problem, 3 to 5 points covering the feature's main capabilities in concrete detail, outro, plus `source`, `features` (the backlog ids), `publish_on`, `status: "ready"`, `platforms` (instagram, facebook, tiktok, youtube, linkedin, each `{status:"todo", result:""}`). Write `narration` and run `python3 tools/voice.py <dir>` (see "Voice-over" above). Check stills (`node tools/reel.mjs <dir> --frames ...` at mid-scene times, look at every frame, delete them), then render (`node tools/reel.mjs <dir>`).
    - `li.html` (1200×1200, copy the task-management one's layout): "New this week" pill, the headline feature, one sentence, a 4-tile grid (the headline's key points, or the headline plus runners-up), footer. Render with `node tools/render.mjs <dir>` and look at `li.jpg`.
    - `caption.txt` (Instagram/Facebook/TikTok/YouTube), `caption-linkedin.txt` (problem-first, short paragraphs, numbered list, runners-up as "Also new this week: …" if any, "Your first property is free: investorjoint.com.au", 3–4 hashtags), `youtube-title.txt` (≤ 90 chars, ends with `#shorts`). Australian English.
 6. **Checks — every one must pass, or go to "On failure".** Never name or compare to other software products or brands (no "Trello-style", "like Xero", competitor names): describe what the feature does instead. Only shipped, switched-on features; only what the code docs say they do; no invented numbers, prices, customer names or testimonials (the only price claim is "first property free"); no real addresses, names, emails, phone numbers or account IDs; spelling checked.
