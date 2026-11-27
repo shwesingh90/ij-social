@@ -1,6 +1,6 @@
 # Daily blog + rental listing playbook
 
-The daily scheduled task follows this file. Each run posts every **new InvestorJoint blog article** and up to **two new rental listings** from investorjoint.com.au to Instagram (@investorjoint), the Facebook Page and the LinkedIn company page. Posting is fully automatic, so the checks below are the approval: if a check fails for an item, do not post that item.
+The daily scheduled task follows this file. Each run posts every **new InvestorJoint blog article** and **every new rental listing that has its photos uploaded** from investorjoint.com.au to Instagram (@investorjoint), the Facebook Page and the LinkedIn company page. Posting is fully automatic, so the checks below are the approval: if a check fails for an item, do not post that item.
 
 Accounts (Windsor.ai for Social Media): Instagram connector `instagram`, account `17841469857926696`. LinkedIn connector `linkedin_organic`, account `100540388`. Facebook Page "Investor Joint": connector `facebook_organic`, account `496241900236188`.
 
@@ -9,7 +9,7 @@ Public image URL pattern: `https://raw.githubusercontent.com/shwesingh90/ij-soci
 ## Steps
 
 1. **Set up.** `git pull` on `main`; `cd tools && npm install`.
-2. **Discover.** From the repo root: `node tools/daily.mjs discover --max-listings 2 --max-blogs 3`. It compares the public sitemaps with `daily/seen.json` and creates one folder per new item under `daily/<today>/` with `item.json` (plus `article.txt` for a blog, `photo.jpg` for a listing). If it prints `(nothing new)`, finish with a one-line "nothing new today" summary and stop. Do not commit anything.
+2. **Discover.** From the repo root: `node tools/daily.mjs discover --max-listings 10 --max-blogs 3`. It compares the public sitemaps and the /rent pages (the sitemap leaves out noindexed listings) with `daily/seen.json` and creates one folder per new item under `daily/<today>/` with `item.json` (plus `article.txt` for a blog, `photo.jpg` for a listing). A `(waiting: …)` line is a listing with no photos yet: it is left unseen on purpose so a later run posts it once the photos are up; do nothing with it. If it prints `(nothing new)` or only waiting lines, finish with a one-line "nothing new today" summary and stop. Do not commit anything.
 3. **Skipped items.** An `item.json` with a non-empty `skip` (for example a listing that restricts tenants by sex, religion or background, or one no longer available) is never posted. Run `node tools/daily.mjs seen <dir>`, add a `log.md` line with the reason, and list it in the final summary under "needs Shwe's attention", including the listing URL.
 4. **Blog items: write the takeaways.** Read `article.txt` in full. Fill `takeaways` in `item.json` with exactly 3 points, each 4 to 9 words, plain Australian English, taken only from what the article says. No numbers unless the article states them exactly. No advice beyond the article. If it covers tax or law, keep it general ("what changed", "who it affects").
 5. **Render.** `node tools/daily.mjs cards daily/<today>`. It must exit 0. Then open every `card.jpg` with the image viewer and check it: no clipped or overlapping text, the photo shows the property, and nothing is cut off at the edges. A listing whose photo is a flyer or graphic is fine. A photo that shows people's faces, a tenant's belongings close-up, or a document is not: skip that item (step 3).
@@ -32,5 +32,5 @@ Public image URL pattern: `https://raw.githubusercontent.com/shwesingh90/ij-soci
 ## Changing things
 
 - Stop posting listings or blogs: tell Claude, or pause the scheduled task.
-- Post fewer or more listings per day: change `--max-listings`.
+- Post fewer or more listings per day: change `--max-listings` (10 by default, so normally every new listing goes out).
 - Never post a particular URL: add it to the right list in `daily/seen.json`.

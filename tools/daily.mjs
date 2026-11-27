@@ -37,6 +37,25 @@ const sitemap = name => [...curl(`${SITE}/${name}`).matchAll(/<url>([\s\S]*?)<\/
   lastmod: (m[1].match(/<lastmod>(.*?)<\/lastmod>/) || [])[1] || '',
 })).filter(u => u.loc);
 
+// Every advertised listing: the sitemap leaves out pages marked noindex (often new or thin
+// listings), so also read the public /rent index and each state page.
+function rentListingUrls() {
+  const LIST_RE = /\/rent\/[a-z]+\/[^/]+\/[^/?#"]+$/;
+  const found = new Map();
+  for (const u of sitemap('sitemap-rent.xml')) if (LIST_RE.test(u.loc)) found.set(u.loc, u.lastmod);
+  const pages = [`${SITE}/rent`];
+  for (const st of ['nsw', 'vic', 'qld', 'wa', 'sa', 'tas', 'act', 'nt']) pages.push(`${SITE}/rent/${st}`);
+  for (const pg of pages) {
+    let html = '';
+    try { html = curl(pg); } catch { continue; }
+    for (const m of html.matchAll(/href="(\/rent\/[a-z]+\/[^/"]+\/[^"?#]+)"/g)) {
+      const loc = SITE + m[1];
+      if (LIST_RE.test(loc) && !found.has(loc)) found.set(loc, '');
+    }
+  }
+  return [...found].map(([loc, lastmod]) => ({ loc, lastmod }));
+}
+
 function blogItem(url) {
   const html = curl(url);
   const ld = ldjson(html).find(j => j.datePublished) || {};
@@ -99,7 +118,7 @@ function discover(args) {
   const made = [];
   const blogs = sitemap('sitemap-blog.xml').filter(u => /\/blog\/[^/]+$/.test(u.loc) && !seen.blog.includes(u.loc))
     .sort((a, b) => a.lastmod.localeCompare(b.lastmod)).slice(0, maxB);
-  const listings = sitemap('sitemap-rent.xml').filter(u => /\/rent\/[a-z]+\/[^/]+\/[^/]+$/.test(u.loc) && !seen.listings.includes(u.loc))
+  const listings = rentListingUrls().filter(u => !seen.listings.includes(u.loc))
     .sort((a, b) => a.lastmod.localeCompare(b.lastmod));
   for (const u of blogs) {
     const it = blogItem(u.loc);
@@ -113,7 +132,9 @@ function discover(args) {
   for (const u of listings) {
     if (n >= maxL) break;
     const it = classify(listingItem(u.loc));
-    if (!it.inStock || !it.photoUrl) it.skip = it.skip || 'not currently available, or no photo';
+    // No uploaded photo yet (or not currently advertised): leave it unseen so a later run posts it
+    // once the photos are up. Only a real marketplace photo counts, never a placeholder.
+    if (!it.inStock || !/\/api\/rent-api\/img\//.test(it.photoUrl || '')) { made.push(`(waiting: ${u.loc} has no photos yet or is not available)`); continue; }
     const dir = path.join(day, 'listing-' + u.loc.split('/').pop());
     fs.mkdirSync(dir, { recursive: true });
     if (!it.skip) curl(it.photoUrl, path.join(dir, 'photo.jpg'));
