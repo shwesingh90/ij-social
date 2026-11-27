@@ -1,9 +1,11 @@
 New in InvestorJoint: task management is live ✅
 
 Your team's to-do list, finally in one place:
-1. A drag-and-drop board, Trello-style, or a list view
-2. Tasks linked to a property, entity or contact, or made straight from an email
-3. Step-by-step workflows with due dates that repeat monthly, quarterly or yearly
+1. Board or list view. Drag cards between lanes you name yourself
+2. Rich task cards: several assignees, checklists with their own owners and due dates, labels, files, comments and custom fields
+3. Tasks linked to a property, entity or contact, or created straight from an email
+4. Workflows with staged steps assigned by role, repeating monthly, quarterly or yearly, or starting automatically when a lease is signed or an application approved
+5. Bell and email alerts when you're assigned, plus reminders when work is due or overdue
 
 Find it under Tasks in the sidebar. Your first property is free → link in bio.
 

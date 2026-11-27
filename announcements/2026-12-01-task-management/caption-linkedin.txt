@@ -1,12 +1,15 @@
 Task management is now live in InvestorJoint.
 
-Property work never lives in one place: a lease renewal in your inbox, a compliance check on a spreadsheet, a maintenance follow-up on a sticky note. Now it can sit on one board, right next to the properties, leases and clients it belongs to.
+Property work rarely lives in one place: a lease renewal in your inbox, a compliance check on a spreadsheet, a maintenance follow-up on a sticky note. Now it can all sit in one place, right next to the properties, leases and clients it belongs to.
 
-What's in it:
-1. A drag-and-drop board (Trello-style), or a list view
-2. Several assignees per task, with checklists, labels, files and comments
-3. Tasks linked to a property, entity or contact, or created straight from an email
-4. Step-by-step workflows with due dates, set to repeat monthly, quarterly or yearly
+What it does:
+1. Board or list view, with lanes you name yourself and drag-and-drop between them
+2. Rich task cards: several assignees and followers, checklists where each item has its own owner and due date, coloured labels, start and due dates, files, comments and a full history
+3. Custom fields (text, number, amount, date, dropdown, person or property) that show on cards and can be filtered
+4. Tasks linked to a property, entity or contact, or created straight from an email
+5. Workflows: staged steps assigned by role with due dates, set to repeat monthly, quarterly or yearly, or started automatically when an application is approved, a lease is signed, an offer is accepted or a settlement date is set
+6. Saved filters shared with your team, bulk edits, task templates and copying
+7. Bell and email alerts when you're assigned, and reminders when work is due tomorrow or overdue
 
 Find it under Tasks in the sidebar. Your first property is free: investorjoint.com.au
 

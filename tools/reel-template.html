@@ -33,6 +33,16 @@ body{margin:0;background:#000}
 .pt.light .num{color:#7B3FA8}
 .pt.light .of{color:#8A8393}
 .pt.light .card{background:#fff;border:4px solid #2B2730;box-shadow:18px 20px 0 #2B2730}
+.ph{background:#2B2730;color:#fff}
+.ph .img{position:absolute;inset:0;background-size:cover;background-position:center}
+.ph .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,39,48,.8) 0%,rgba(43,39,48,0) 22%,rgba(43,39,48,0) 45%,rgba(43,39,48,.85) 78%,rgba(43,39,48,.9) 100%)}
+.ph .of{position:absolute;right:110px;top:150px;font-size:34px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#fff}
+.ph .info{position:absolute;left:70px;right:90px;top:1040px;background:rgba(43,39,48,.9);border-radius:36px;padding:44px 48px;box-shadow:16px 18px 0 #7B3FA8}
+.ph .tag{display:inline-block;font-size:30px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:#86C5EE;color:#2B2730;padding:10px 22px;border-radius:999px;margin-bottom:22px}
+.ph h2{margin:0 0 18px;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:92px;line-height:1;letter-spacing:-1.5px}
+.ph .rent{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:700;font-size:64px;color:#CFE6FA;margin-bottom:20px}
+.ph .facts{display:flex;gap:34px;font-size:42px;font-weight:600;align-items:center}
+.ph .facts span{display:flex;gap:12px;align-items:center}
 /* outro */
 #outro{background:#7B3FA8;color:#fff}
 #outro .big{position:absolute;left:90px;right:100px;top:560px;margin:0;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:132px;line-height:1;letter-spacing:-2.5px}
@@ -86,6 +96,20 @@ if (R.hook.sub) A(hook.querySelector('.sub'), [{opacity:0,transform:'translateY(
 // POINTS
 pts.forEach((p,i)=>{
   const st = HOOK + i*PT, en = st + PT;
+  if (p.photo) {
+    const ic = (k) => ({bed:'<path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18h18"/><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/>',bath:'<path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 4 0"/>',car:'<path d="M5 16l1.5-5a2 2 0 0 1 2-1.5h7a2 2 0 0 1 2 1.5L19 16"/><rect x="3" y="16" width="18" height="4" rx="1"/>'}[k]);
+    const svgI = k => `<svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#86C5EE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ic(k)}</svg>`;
+    const facts = [['bed',p.beds],['bath',p.baths],['car',p.parking]].filter(([,v]) => v != null && v !== '').map(([k,v]) => `<span>${svgI(k)}${esc(v)}</span>`).join('');
+    const d = scene(null, 'ph', `
+      <div class="img" style="background-image:url('${esc((window.REEL_BASE || '') + p.photo)}')"></div>
+      <div class="shade"></div>
+      <div class="mark" style="color:#fff">Investor<span style="color:#86C5EE">Joint</span></div>
+      <div class="of">${i+1} of ${pts.length}</div>
+      <div class="info">${p.tag ? `<div class="tag">${esc(p.tag)}</div>` : ''}<h2>${esc(p.title)}</h2>${p.body ? `<div class="rent">${esc(p.body)}</div>` : ''}<div class="facts">${facts}</div></div>`, st, en);
+    A(d.querySelector('.img'), [{transform:'scale(1.12) translateX(2%)'},{transform:'scale(1) translateX(0)'}], st, PT, {easing:'linear'});
+    A(d.querySelector('.info'), [{opacity:0,transform:'translateY(80px)'},{opacity:1,transform:'none'}], st+.3, .7);
+    return;
+  }
   const d = scene(null, 'pt' + (i%2 ? ' light' : ''), `
     <div class="mark" style="color:${i%2?'#2B2730':'#F4F1F8'}">Investor<span style="color:${i%2?'#7B3FA8':'#86C5EE'}">Joint</span></div>
     <div class="num">${i+1}</div>
@@ -102,7 +126,7 @@ const out = scene('outro', '', `
   <div class="mk">Investor<span>Joint</span></div>
   <h2 class="big">${esc(R.outro.line1)}<br><em>${esc(R.outro.accent)}</em></h2>
   <div class="cta">${esc(R.outro.cta || 'Your first property is free')}</div>
-  <div class="url">investorjoint.com.au</div>`, os, total, true);
+  <div class="url">${esc(R.outro.url || "investorjoint.com.au")}</div>`, os, total, true);
 A(out.querySelector('.big'), [{opacity:0,transform:'translateY(60px)'},{opacity:1,transform:'none'}], os+.15, .6);
 A(out.querySelector('.cta'), [{opacity:0,transform:'scale(.8)'},{opacity:1,transform:'none'}], os+.7, .5, {easing:'cubic-bezier(.3,1.5,.5,1)'});
 A(out.querySelector('.url'), [{opacity:0},{opacity:1}], os+1.1, .5);

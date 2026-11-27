@@ -9,16 +9,24 @@
   },
   "points": [
     {
-      "title": "A board you can drag",
-      "body": "Move cards across columns, Trello-style, or switch to a list."
+      "title": "Board or list, your way",
+      "body": "Drag cards between lanes you name yourself, or switch to a list."
+    },
+    {
+      "title": "Everything on the card",
+      "body": "Several assignees, checklists, labels, files, dates and custom fields."
     },
     {
       "title": "Linked to the real work",
       "body": "Tie a task to a property, entity or contact, or make one from an email."
     },
     {
-      "title": "Workflows that repeat",
-      "body": "Step-by-step workflows with due dates, repeating monthly, quarterly or yearly."
+      "title": "Workflows that run themselves",
+      "body": "Staged steps by role, repeating monthly or quarterly, or started when a lease is signed."
+    },
+    {
+      "title": "Nothing slips through",
+      "body": "Bell and email alerts when you're assigned, and reminders when work is due or overdue."
     }
   ],
   "outro": {

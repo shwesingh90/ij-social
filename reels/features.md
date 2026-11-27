@@ -1,6 +1,6 @@
 # Reel feature plan
 
-The Wednesday reel takes the first `todo` row, then marks it `done: <slug>`. Only real, shipped InvestorJoint features (same facts as `topics.md`).
+The Wednesday reel (only in a week with no new rental listings) takes the first `todo` row, then marks it `done: <slug>`. Only real, shipped InvestorJoint features (same facts as `topics.md`).
 
 | # | Feature | Angle (what the reel says) | Status |
 |---|---------|----------------------------|--------|
