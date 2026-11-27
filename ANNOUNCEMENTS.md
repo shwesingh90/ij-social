@@ -25,6 +25,10 @@ Every reel has a spoken voice-over: Shwe's standing choice is the free local Bri
 - Check stills at the new scene times (frames ≈ halfway through each scene) before the full render. Commit the `vo-*.wav` files with the reel.
 - If the voice step fails, do not post a silent reel: mark it `failed` with the error and report it.
 
+## Written commentary (every post)
+
+Every post carries full written text, never just the video: the caption says in words what the video says (the hook, each point, the call to action), so someone scrolling with the sound off gets the whole message. Instagram/TikTok/YouTube use `caption.txt` (YouTube adds the `youtube-title.txt` title); Facebook uses the same text with "link in bio" replaced by "investorjoint.com.au"; LinkedIn uses `caption-linkedin.txt`. TikTok captions are capped at 2,200 characters: shorten, don't drop the points. A YouTube or TikTok upload that failed is retried on the next run (check the platform status in reel.json first so nothing posts twice).
+
 ## Steps
 
 1. **Set up.** `git pull` on `main`; `cd tools && npm install`. If `announcements/*/reel.json` has `"status": "ready"` and `publish_on` ≤ today (Sydney), it is already made: skip to step 7. If one for this week already has `"status": "posted"`, stop.

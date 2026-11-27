@@ -35,7 +35,7 @@
     "cta": "Your first property is free"
   },
   "publish_on": "2026-11-27",
-  "status": "ready",
+  "status": "posted",
   "features": [
     "U277",
     "U279",
@@ -44,24 +44,24 @@
   ],
   "platforms": {
     "instagram": {
-      "status": "todo",
-      "result": ""
+      "status": "posted",
+      "result": "media id 18074436428784675"
     },
     "facebook": {
-      "status": "todo",
-      "result": ""
-    },
-    "tiktok": {
-      "status": "todo",
-      "result": ""
-    },
-    "youtube": {
-      "status": "todo",
-      "result": ""
+      "status": "posted",
+      "result": "post 496241900236188_122187759710645456"
     },
     "linkedin": {
-      "status": "todo",
-      "result": ""
+      "status": "posted",
+      "result": "urn:li:share:7531945651195019265"
+    },
+    "youtube": {
+      "status": "failed",
+      "result": "YouTube rate-limited the upload twice (27 Nov); retry on the next run"
+    },
+    "tiktok": {
+      "status": "failed",
+      "result": "TikTok: video publishing scope not authorised; reconnect at https://onboard.windsor.ai/app/tiktok_organic_v2"
     }
   },
   "narration": [
