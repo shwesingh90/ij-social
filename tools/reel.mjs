@@ -55,7 +55,7 @@ const fontsOk = await page.evaluate(() => document.fonts.check("800 40px 'Fraunc
 if (!fontsOk) { console.error('brand fonts did not load'); process.exit(2); }
 // Wait for every listing photo to decode before filming, or early frames come out blank.
 const photoErr = await page.evaluate(async () => {
-  const urls = (window.REEL.points || []).filter(p => p.photo).map(p => window.REEL_BASE + p.photo);
+  const urls = [...(window.REEL.points || []).filter(p => p.photo).map(p => p.photo), window.REEL.presenter, window.REEL.logo].filter(Boolean).map(u => window.REEL_BASE + u);
   const bad = [];
   await Promise.all(urls.map(u => new Promise(res => { const im = new Image(); im.onload = () => res(); im.onerror = () => { bad.push(u); res(); }; im.src = u; })));
   return bad;
