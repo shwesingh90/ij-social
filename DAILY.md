@@ -1,8 +1,8 @@
 # Daily blog + rental listing playbook
 
-The daily scheduled task follows this file. Each run posts every **new InvestorJoint blog article** and up to **two new rental listings** from investorjoint.com.au to Instagram (@investorjoint) and the LinkedIn company page. Posting is fully automatic, so the checks below are the approval: if a check fails for an item, do not post that item.
+The daily scheduled task follows this file. Each run posts every **new InvestorJoint blog article** and up to **two new rental listings** from investorjoint.com.au to Instagram (@investorjoint), the Facebook Page and the LinkedIn company page. Posting is fully automatic, so the checks below are the approval: if a check fails for an item, do not post that item.
 
-Accounts (Windsor.ai for Social Media): Instagram connector `instagram`, account `17841469857926696`. LinkedIn connector `linkedin_organic`, account `100540388`.
+Accounts (Windsor.ai for Social Media): Instagram connector `instagram`, account `17841469857926696`. LinkedIn connector `linkedin_organic`, account `100540388`. Facebook Page "Investor Joint": connector `facebook_organic`, account `496241900236188`.
 
 Public image URL pattern: `https://raw.githubusercontent.com/shwesingh90/ij-social/main/daily/<date>/<item>/card.jpg`
 
@@ -22,6 +22,8 @@ Public image URL pattern: `https://raw.githubusercontent.com/shwesingh90/ij-soci
    - Instagram, all items: `execute_action` → `instagram` / `17841469857926696` / `create_image_post` with the raw `card.jpg` URL and the Instagram caption.
    - LinkedIn, blog: `execute_action` → `linkedin_organic` / `100540388` / `create_post` with `commentary` = the LinkedIn caption, `link` = the article URL, `link_title` = the article title, `link_description` = the article's meta description from `item.json`.
    - LinkedIn, listing: `execute_action` → `linkedin_organic` / `100540388` / `create_image_post` with the raw `card.jpg` URL and the LinkedIn caption.
+   - Facebook, blog: `execute_action` → `facebook_organic` / `496241900236188` / `create_post` with `message` = the LinkedIn caption and `link` = the article URL.
+   - Facebook, listing: `execute_action` → `facebook_organic` / `496241900236188` / `create_photo_post` with the raw `card.jpg` URL and `caption` = the LinkedIn caption (it ends with the listing link).
    - One call per action. On an error, at most one retry after 60 seconds, then record the failure and move on.
    - Leave about a minute between posts so the feed doesn't get a burst.
 9. **Record.** For each item, run `node tools/daily.mjs seen <dir>` only if it posted to at least one platform (a failure on both platforms stays unseen so tomorrow's run retries it). Add a line per item to `daily/log.md`. Commit and push.

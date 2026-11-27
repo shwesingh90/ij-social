@@ -1,0 +1,13 @@
+Task management is now live in InvestorJoint.
+
+Property work never lives in one place: a lease renewal in your inbox, a compliance check on a spreadsheet, a maintenance follow-up on a sticky note. Now it can sit on one board, right next to the properties, leases and clients it belongs to.
+
+What's in it:
+1. A drag-and-drop board (Trello-style), or a list view
+2. Several assignees per task, with checklists, labels, files and comments
+3. Tasks linked to a property, entity or contact, or created straight from an email
+4. Step-by-step workflows with due dates, set to repeat monthly, quarterly or yearly
+
+Find it under Tasks in the sidebar. Your first property is free: investorjoint.com.au
+
+#PropertyManagement #PropTech #RealEstateAustralia #Productivity

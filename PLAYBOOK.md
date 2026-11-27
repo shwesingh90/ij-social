@@ -1,6 +1,6 @@
 # Weekly post playbook
 
-The Thursday scheduled task follows this file exactly. It publishes one Instagram carousel and one LinkedIn image post for InvestorJoint, fully automatically. Nobody approves the post, so the checks below are the approval: if any check fails, **do not post**.
+The Thursday scheduled task follows this file exactly. It publishes one Instagram carousel, one Facebook multi-photo post and one LinkedIn image post for InvestorJoint, fully automatically. Nobody approves the post, so the checks below are the approval: if any check fails, **do not post**.
 
 ## Accounts (Windsor.ai for Social Media)
 
@@ -8,6 +8,7 @@ The Thursday scheduled task follows this file exactly. It publishes one Instagra
 |---|---|---|---|
 | Instagram @investorjoint | `instagram` | `17841469857926696` | `create_carousel_post` (`image_urls` 2–10 JPEGs in order, `caption` ≤ 2200 chars) |
 | LinkedIn company page | `linkedin_organic` | `100540388` | `create_image_post` (`image_url`, `commentary` ≤ 3000 chars) |
+| Facebook Page "Investor Joint" | `facebook_organic` | `496241900236188` | `create_multi_photo_post` (`photos` = [{image_url}] of ig-1.jpg…ig-N.jpg in order, `message` = the LinkedIn caption) |
 
 Public image URL pattern (this repo is public):
 `https://raw.githubusercontent.com/shwesingh90/ij-social/main/posts/<slug>/<file>.jpg`
@@ -36,8 +37,9 @@ Public image URL pattern (this repo is public):
 7. **Post.** Re-read `post.json`; skip any platform whose status is already `posted`.
    - Instagram: `execute_action` → `instagram` / `17841469857926696` / `create_carousel_post` with the raw URLs of `ig-1.jpg`…`ig-N.jpg` in order and the Instagram caption.
    - LinkedIn: `execute_action` → `linkedin_organic` / `100540388` / `create_image_post` with the raw URL of `li.jpg` and the LinkedIn caption.
+   - Facebook: `execute_action` → `facebook_organic` / `496241900236188` / `create_multi_photo_post` with the raw URLs of `ig-1.jpg`…`ig-N.jpg` in order and `message` = the LinkedIn caption. Record it in `post.json` under `facebook` like the other two.
    - Call each action once. If a call errors, do not retry it in a loop: one retry after 60 seconds at most, then record the failure.
-8. **Record.** Set each platform's `status` to `posted` (with the returned id in `result`) or `failed` (with the error), and the post's `status` to `posted` if both posted, else `partial` or `failed`. Mark the topic row `done: <slug>`. Add a line to `log.md`. Commit and push.
+8. **Record.** Set each platform's `status` to `posted` (with the returned id in `result`) or `failed` (with the error), and the post's `status` to `posted` if all posted, else `partial` or `failed`. Mark the topic row `done: <slug>`. Add a line to `log.md`. Commit and push.
 9. **Report.** Finish with a short summary: topic, what posted where (with ids), anything that failed.
 
 ## On failure

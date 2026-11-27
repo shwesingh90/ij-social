@@ -7,7 +7,7 @@ The Mon/Wed/Fri scheduled task follows this file. Each run makes one short verti
 | Platform | connector | account | action |
 |---|---|---|---|
 | Instagram @investorjoint | `instagram` | `17841469857926696` | `create_video_post` (`video_url`, `caption`, `cover_url` = cover.jpg, `share_to_feed: true`) |
-| Facebook Page | `facebook_organic` | from `get_connectors` | `create_reel` (`video_url`, `description` = caption) |
+| Facebook Page "Investor Joint" | `facebook_organic` | `496241900236188` | `create_reel` (`video_url`, `description` = caption with "link in bio" replaced by "investorjoint.com.au") |
 | TikTok | `tiktok_organic` | from `get_connectors` | `create_video_post` (`video_url`, `caption`) |
 | YouTube Shorts | `youtube` | from `get_connectors` | `upload_video` (`video_url`, `title` from youtube-title.txt, `description` = caption, `made_for_kids: false`, `privacy_status: "public"`, `category_id: "22"`) |
 

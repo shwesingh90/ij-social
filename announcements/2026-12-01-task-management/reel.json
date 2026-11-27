@@ -1,0 +1,59 @@
+{
+  "slug": "2026-12-01-task-management",
+  "source": "ijapp backlog U277, U279, U280, U283 (firm task management + workflows), deployed and enabled on prod Nov 2026",
+  "hook": {
+    "kicker": "New: Tasks",
+    "line1": "Your team's to-do list,",
+    "accent": "finally in one place.",
+    "sub": "Task management is now live in InvestorJoint."
+  },
+  "points": [
+    {
+      "title": "A board you can drag",
+      "body": "Move cards across columns, Trello-style, or switch to a list."
+    },
+    {
+      "title": "Linked to the real work",
+      "body": "Tie a task to a property, entity or contact, or make one from an email."
+    },
+    {
+      "title": "Workflows that repeat",
+      "body": "Step-by-step workflows with due dates, repeating monthly, quarterly or yearly."
+    }
+  ],
+  "outro": {
+    "line1": "Less chasing.",
+    "accent": "More done.",
+    "cta": "Your first property is free"
+  },
+  "publish_on": "2026-12-01",
+  "status": "ready",
+  "features": [
+    "U277",
+    "U279",
+    "U280",
+    "U283"
+  ],
+  "platforms": {
+    "instagram": {
+      "status": "todo",
+      "result": ""
+    },
+    "facebook": {
+      "status": "todo",
+      "result": ""
+    },
+    "tiktok": {
+      "status": "todo",
+      "result": ""
+    },
+    "youtube": {
+      "status": "todo",
+      "result": ""
+    },
+    "linkedin": {
+      "status": "todo",
+      "result": ""
+    }
+  }
+}
