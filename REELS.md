@@ -20,7 +20,7 @@ Public URL pattern: `https://raw.githubusercontent.com/shwesingh90/ij-social/mai
 - **Monday and Friday: blog tip reel.** Take the newest URL in `daily/seen.json` → `blog` that is not in `reels/used.json` → `blog`. Fetch it (`curl -sL <url>`) and read the article in full. The reel gives 3 takeaways from that article only. Kicker = the article's topic in 1–3 words. Outro: `line1` "Read the full guide", `accent` "on our blog.", `cta` "Your first property is free".
 - **Wednesday: feature reel.** Take the first `todo` row in `reels/features.md`. Only what that row's angle says the feature does. Outro: a short benefit line + accent, `cta` "Your first property is free".
 
-If today's reel folder already exists with `"status": "posted"`, stop. Never post the same reel or the same article twice (check `reels/log.md` and `reels/used.json`).
+One reel per day at most: if any `reels/*/reel.json` has `publish_on` = today (Sydney) and `"status": "posted"`, stop with a one-line summary. Never post the same reel or the same article twice (check `reels/log.md` and `reels/used.json`).
 
 ## Steps
 
