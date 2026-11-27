@@ -34,7 +34,7 @@ One reel per day at most: if any `reels/*/reel.json` has `publish_on` = today (S
 5. **Captions.** `caption.txt`: hook line, the 3 points as short numbered lines, one benefit line, "Your first property is free → link in bio." (feature) or "Full article: link in bio." (blog), 5–7 hashtags. `youtube-title.txt`: one line ≤ 90 chars ending in `#shorts`. Australian English.
 6. **Checks — every one must pass, or go to "On failure".**
    - Only facts from the article (blog), the features row (feature), the listing pages (rentals) or the opened source pages (market update, every number with its source and date). No invented numbers, stats, prices, testimonials or customer names; the only price claim is "first property free". For tax or law topics, stay general (what changed, who it affects), no personal advice.
-   - Never name another company or product (no "Trello-style", "like Xero", competitor names).
+   - Never name or compare to other software products or brands (no "Trello-style", "like Xero", competitor names). Naming a news or data source as a citation is fine.
    - No real addresses, tenant names, emails, phone numbers or account IDs.
    - Spelling checked; the site is written `investorjoint.com.au`.
 7. **Publish the files.** Commit `reels/<slug>/` (reel.json, reel.mp4, cover.jpg, captions) and push. `curl -sI` the raw `reel.mp4` and `cover.jpg` URLs until both return `200` (retry for up to 5 minutes).
